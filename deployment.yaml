@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pe-wa-deployment
+  name: cntxtapitodo-deployment
 spec:
   replicas: 6  # Number of desired replicas
   selector:
     matchLabels:
-      app: pe-wa
+      app: cntxtapitodo
   template:
     metadata:
       labels:
-        app: pe-wa
+        app: cntxtapitodo
     spec:
       containers:
-      - name: pe-wa
-        image: yash5090/pe-wa:latest
+      - name: cntxtapitodo
+        image: yash5090/cntxtapitodo:latest
         ports:
-        - containerPort: 5000
+        - containerPort: 3000
